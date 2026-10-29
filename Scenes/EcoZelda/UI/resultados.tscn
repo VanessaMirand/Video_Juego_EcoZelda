@@ -1,0 +1,162 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/EcoZelda/UI/resultados.gd" id="1_npvo5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aalbi"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.07058824, 0.19607843, 0.2901961, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.22745098, 0.41568628, 0.5411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2d7eb"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6vbya"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.11764706, 0.2901961, 0.41568628, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7t800"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.07058824, 0.19607843, 0.2901961, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.22745098, 0.41568628, 0.5411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1om5w"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.16470589, 0.3529412, 0.47843137, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tvier"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_md4fj"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_m5de2"]
+default_font_size = 8
+Button/colors/font_disabled_color = Color(0.9, 0.9, 0.9, 1)
+Button/styles/disabled = SubResource("StyleBoxFlat_aalbi")
+Button/styles/focus = SubResource("StyleBoxFlat_2d7eb")
+Button/styles/hover = SubResource("StyleBoxFlat_6vbya")
+Button/styles/normal = SubResource("StyleBoxFlat_7t800")
+Button/styles/pressed = SubResource("StyleBoxFlat_1om5w")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Panel/styles/panel = SubResource("StyleBoxFlat_tvier")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_md4fj")
+
+[node name="Resultados" type="Control" unique_id=31524280]
+layout_mode = 3
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 256.0
+offset_bottom = 240.0
+theme = SubResource("Theme_m5de2")
+script = ExtResource("1_npvo5")
+
+[node name="Fondo" type="ColorRect" parent="." unique_id=1597146777]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 256.0
+offset_bottom = 240.0
+mouse_filter = 2
+color = Color(0.043137256, 0.12156863, 0.07058824, 1)
+
+[node name="Titulo" type="Label" parent="." unique_id=688540397]
+layout_mode = 0
+offset_top = 6.0
+offset_right = 256.0
+offset_bottom = 22.0
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.49411765, 0.8784314, 0.5411765, 1)
+text = "¡ECOSISTEMA RESTAURADO!"
+horizontal_alignment = 1
+
+[node name="Resumen" type="RichTextLabel" parent="." unique_id=1610176090]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 14.0
+offset_top = 26.0
+offset_right = 242.0
+offset_bottom = 194.0
+bbcode_enabled = true
+text = "Resumen"
+scroll_active = false
+
+[node name="Mensaje" type="Label" parent="." unique_id=1148404257]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 6.0
+offset_top = 198.0
+offset_right = 250.0
+offset_bottom = 218.0
+theme_override_font_sizes/font_size = 9
+theme_override_colors/font_color = Color(1, 0.8784314, 0.2509804, 1)
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Volver" type="Label" parent="." unique_id=1200843058]
+layout_mode = 0
+offset_top = 226.0
+offset_right = 256.0
+offset_bottom = 238.0
+theme_override_font_sizes/font_size = 7
+theme_override_colors/font_color = Color(0.54901963, 0.78431374, 1, 1)
+text = "ENTER: volver al inicio"
+horizontal_alignment = 1

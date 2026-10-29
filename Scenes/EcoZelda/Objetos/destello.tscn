@@ -1,0 +1,46 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://Assets/EcoZelda/destello.png" id="1_5lbib"]
+[ext_resource type="Script" path="res://Scripts/EcoZelda/Objetos/destello.gd" id="2_be3hg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7t8c"]
+atlas = ExtResource("1_5lbib")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a655u"]
+atlas = ExtResource("1_5lbib")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0wdd"]
+atlas = ExtResource("1_5lbib")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rdn1"]
+atlas = ExtResource("1_5lbib")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4erk3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7t8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a655u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0wdd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rdn1")
+}],
+"loop": 0,
+"name": &"brillo",
+"speed": 12.0
+}]
+
+[node name="Destello" type="AnimatedSprite2D" unique_id=394401378]
+z_index = 15
+sprite_frames = SubResource("SpriteFrames_4erk3")
+animation = &"brillo"
+script = ExtResource("2_be3hg")

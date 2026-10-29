@@ -1,0 +1,207 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/EcoZelda/UI/trivia.gd" id="1_ba5eo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aalbi"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.07058824, 0.19607843, 0.2901961, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.22745098, 0.41568628, 0.5411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2d7eb"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6vbya"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.11764706, 0.2901961, 0.41568628, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7t800"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.07058824, 0.19607843, 0.2901961, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.22745098, 0.41568628, 0.5411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1om5w"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.16470589, 0.3529412, 0.47843137, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tvier"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_md4fj"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_m5de2"]
+default_font_size = 8
+Button/colors/font_disabled_color = Color(0.9, 0.9, 0.9, 1)
+Button/styles/disabled = SubResource("StyleBoxFlat_aalbi")
+Button/styles/focus = SubResource("StyleBoxFlat_2d7eb")
+Button/styles/hover = SubResource("StyleBoxFlat_6vbya")
+Button/styles/normal = SubResource("StyleBoxFlat_7t800")
+Button/styles/pressed = SubResource("StyleBoxFlat_1om5w")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Panel/styles/panel = SubResource("StyleBoxFlat_tvier")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_md4fj")
+
+[node name="Trivia" type="Control" unique_id=49501129]
+layout_mode = 3
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 256.0
+offset_bottom = 240.0
+theme = SubResource("Theme_m5de2")
+script = ExtResource("1_ba5eo")
+
+[node name="Fondo" type="ColorRect" parent="." unique_id=327606075]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 256.0
+offset_bottom = 240.0
+mouse_filter = 2
+color = Color(0.043137256, 0.12156863, 0.16470589, 1)
+
+[node name="Titulo" type="Label" parent="." unique_id=1911489278]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 6.0
+offset_right = 256.0
+offset_bottom = 22.0
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(1, 0.8784314, 0.2509804, 1)
+text = "TRIVIA INICIAL"
+horizontal_alignment = 1
+
+[node name="Progreso" type="Label" parent="." unique_id=757545312]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 24.0
+offset_right = 256.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.54901963, 0.78431374, 1, 1)
+text = "Pregunta 1 de 3"
+horizontal_alignment = 1
+
+[node name="Pregunta" type="Label" parent="." unique_id=26890770]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 10.0
+offset_top = 38.0
+offset_right = 246.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 10
+text = "¿Pregunta?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Opciones" type="VBoxContainer" parent="." unique_id=1556883776]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 14.0
+offset_top = 80.0
+offset_right = 242.0
+offset_bottom = 178.0
+theme_override_constants/separation = 4
+
+[node name="BotonA" type="Button" parent="Opciones" unique_id=823687070]
+custom_minimum_size = Vector2(228, 21)
+layout_mode = 2
+text = "A) Opción"
+alignment = 0
+
+[node name="BotonB" type="Button" parent="Opciones" unique_id=1093223680]
+custom_minimum_size = Vector2(228, 21)
+layout_mode = 2
+text = "B) Opción"
+alignment = 0
+
+[node name="BotonC" type="Button" parent="Opciones" unique_id=1898843470]
+custom_minimum_size = Vector2(228, 21)
+layout_mode = 2
+text = "C) Opción"
+alignment = 0
+
+[node name="BotonD" type="Button" parent="Opciones" unique_id=852622198]
+custom_minimum_size = Vector2(228, 21)
+layout_mode = 2
+text = "D) Opción"
+alignment = 0
+
+[node name="Retro" type="Label" parent="." unique_id=1376736513]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 10.0
+offset_top = 182.0
+offset_right = 246.0
+offset_bottom = 216.0
+theme_override_colors/font_color = Color(0.49411765, 0.8784314, 0.5411765, 1)
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Ayuda" type="Label" parent="." unique_id=1706122702]
+layout_mode = 0
+offset_top = 224.0
+offset_right = 256.0
+offset_bottom = 236.0
+theme_override_font_sizes/font_size = 7
+theme_override_colors/font_color = Color(0.6, 0.7, 0.8, 1)
+text = "Responde con 1-4, A-D, flechas + ENTER o el mouse"
+horizontal_alignment = 1

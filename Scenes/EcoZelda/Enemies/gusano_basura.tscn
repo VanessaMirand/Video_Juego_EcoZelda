@@ -1,0 +1,106 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/EcoZelda/Enemies/gusano_basura.gd" id="1_6vs0o"]
+[ext_resource type="Texture2D" path="res://Assets/EcoZelda/gusano_basura.png" id="2_7mswu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1a5qi"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a1qbp"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0adp7"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2m4c7"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_afr0i"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_04wce"]
+radius = 5.0
+
+[node name="GusanoBasura" type="CharacterBody2D" unique_id=93719822]
+collision_layer = 4
+collision_mask = 33
+script = ExtResource("1_6vs0o")
+speed = 40.0
+segment_delay = 9
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1386347037]
+z_index = 1
+texture = ExtResource("2_7mswu")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=757576031]
+shape = SubResource("CircleShape2D_1a5qi")
+
+[node name="Segmentos" type="Node" parent="." unique_id=1126619077]
+
+[node name="Segment1" type="Area2D" parent="Segmentos" unique_id=1280846175]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Segmentos/Segment1" unique_id=1594538724]
+texture = ExtResource("2_7mswu")
+region_enabled = true
+region_rect = Rect2(16, 2, 12, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Segmentos/Segment1" unique_id=1550334477]
+shape = SubResource("CircleShape2D_a1qbp")
+
+[node name="Segment2" type="Area2D" parent="Segmentos" unique_id=139944040]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Segmentos/Segment2" unique_id=1121721632]
+texture = ExtResource("2_7mswu")
+region_enabled = true
+region_rect = Rect2(16, 2, 12, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Segmentos/Segment2" unique_id=1698282265]
+shape = SubResource("CircleShape2D_0adp7")
+
+[node name="Segment3" type="Area2D" parent="Segmentos" unique_id=797772947]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Segmentos/Segment3" unique_id=2090845424]
+texture = ExtResource("2_7mswu")
+region_enabled = true
+region_rect = Rect2(16, 2, 12, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Segmentos/Segment3" unique_id=1151893711]
+shape = SubResource("CircleShape2D_2m4c7")
+
+[node name="Segment4" type="Area2D" parent="Segmentos" unique_id=1686121357]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Segmentos/Segment4" unique_id=2129505415]
+texture = ExtResource("2_7mswu")
+region_enabled = true
+region_rect = Rect2(16, 2, 12, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Segmentos/Segment4" unique_id=333454682]
+shape = SubResource("CircleShape2D_afr0i")
+
+[node name="Segment5" type="Area2D" parent="Segmentos" unique_id=1211695588]
+collision_layer = 4
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Segmentos/Segment5" unique_id=773037491]
+texture = ExtResource("2_7mswu")
+region_enabled = true
+region_rect = Rect2(16, 2, 12, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Segmentos/Segment5" unique_id=1752520949]
+shape = SubResource("CircleShape2D_04wce")
+
+[node name="RandomDirectionTimer" type="Timer" parent="." unique_id=1646950029]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="RandomDirectionTimer" to="." method="_on_random_direction_timer_timeout"]

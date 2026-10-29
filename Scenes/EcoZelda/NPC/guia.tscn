@@ -1,0 +1,39 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/EcoZelda/NPC/guia.gd" id="1_hw2ul"]
+[ext_resource type="Texture2D" path="res://Assets/05_Other/Old_Man.png" id="2_s1ovl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02s30"]
+size = Vector2(12, 12)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a2s8h"]
+radius = 22.0
+
+[node name="Guia" type="StaticBody2D" unique_id=943423004]
+script = ExtResource("1_hw2ul")
+dialogos = PackedStringArray()
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1026571318]
+texture = ExtResource("2_s1ovl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1215387871]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_02s30")
+
+[node name="ZonaHablar" type="Area2D" parent="." unique_id=1116931014]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaHablar" unique_id=836906774]
+shape = SubResource("CircleShape2D_a2s8h")
+
+[node name="Aviso" type="Label" parent="." unique_id=2079081666]
+offset_left = -16.0
+offset_top = -22.0
+offset_right = 16.0
+offset_bottom = -10.0
+theme_override_font_sizes/font_size = 7
+theme_override_colors/font_color = Color(1, 0.8784314, 0.2509804, 1)
+theme_override_constants/outline_size = 2
+text = "ENTER"
+horizontal_alignment = 1

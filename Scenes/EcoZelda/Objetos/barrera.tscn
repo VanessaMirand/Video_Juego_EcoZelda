@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/EcoZelda/Objetos/barrera.gd" id="1_apjbj"]
+[ext_resource type="Texture2D" path="res://Assets/EcoZelda/barrera.png" id="2_ee2ty"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2whpk"]
+size = Vector2(16, 32)
+
+[node name="Barrera" type="StaticBody2D" unique_id=1013089179]
+script = ExtResource("1_apjbj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=27652420]
+texture = ExtResource("2_ee2ty")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=643270408]
+shape = SubResource("RectangleShape2D_2whpk")

@@ -1,0 +1,524 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/EcoZelda/UI/hud.gd" id="1_ivss7"]
+[ext_resource type="Texture2D" path="res://Assets/EcoZelda/iconos.png" id="2_4c635"]
+[ext_resource type="Texture2D" path="res://Assets/EcoZelda/pinza.png" id="3_lcd6g"]
+[ext_resource type="Texture2D" path="res://Assets/EcoZelda/canecas.png" id="4_toxfu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aalbi"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.07058824, 0.19607843, 0.2901961, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.22745098, 0.41568628, 0.5411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2d7eb"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6vbya"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.11764706, 0.2901961, 0.41568628, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7t800"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.07058824, 0.19607843, 0.2901961, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.22745098, 0.41568628, 0.5411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1om5w"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.16470589, 0.3529412, 0.47843137, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tvier"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_md4fj"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_m5de2"]
+default_font_size = 8
+Button/colors/font_disabled_color = Color(0.9, 0.9, 0.9, 1)
+Button/styles/disabled = SubResource("StyleBoxFlat_aalbi")
+Button/styles/focus = SubResource("StyleBoxFlat_2d7eb")
+Button/styles/hover = SubResource("StyleBoxFlat_6vbya")
+Button/styles/normal = SubResource("StyleBoxFlat_7t800")
+Button/styles/pressed = SubResource("StyleBoxFlat_1om5w")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Panel/styles/panel = SubResource("StyleBoxFlat_tvier")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_md4fj")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7ruk"]
+atlas = ExtResource("2_4c635")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyylt"]
+atlas = ExtResource("2_4c635")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mw3si"]
+atlas = ExtResource("2_4c635")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwl5l"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 0.88, 0.25, 0.15)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bfcj"]
+atlas = ExtResource("4_toxfu")
+region = Rect2(0, 0, 20, 24)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m5ue4"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 0.88, 0.25, 0.15)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_px74g"]
+atlas = ExtResource("4_toxfu")
+region = Rect2(20, 0, 20, 24)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_08xfc"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 0.88, 0.25, 0.15)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4dia"]
+atlas = ExtResource("4_toxfu")
+region = Rect2(40, 0, 20, 24)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yh3kl"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 0.88, 0.25, 0.15)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6ddh"]
+atlas = ExtResource("4_toxfu")
+region = Rect2(60, 0, 20, 24)
+
+[node name="HUD" type="CanvasLayer" unique_id=1580362660]
+layer = 10
+script = ExtResource("1_ivss7")
+
+[node name="BarraSuperior" type="ColorRect" parent="." unique_id=234240690]
+offset_right = 256.0
+offset_bottom = 32.0
+theme = SubResource("Theme_m5de2")
+color = Color(0, 0, 0, 1)
+
+[node name="LabelVida" type="Label" parent="BarraSuperior" unique_id=845361583]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 1.0
+offset_right = 42.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(1, 0.3764706, 0.4392157, 1)
+text = "VIDA"
+
+[node name="Corazones" type="HBoxContainer" parent="BarraSuperior" unique_id=1868019023]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 6.0
+offset_top = 14.0
+offset_right = 6.0
+offset_bottom = 14.0
+theme_override_constants/separation = 1
+
+[node name="Corazon1" type="TextureRect" parent="BarraSuperior/Corazones" unique_id=934345049]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+texture = SubResource("AtlasTexture_k7ruk")
+
+[node name="Corazon2" type="TextureRect" parent="BarraSuperior/Corazones" unique_id=350149957]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+texture = SubResource("AtlasTexture_fyylt")
+
+[node name="Corazon3" type="TextureRect" parent="BarraSuperior/Corazones" unique_id=968691309]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+texture = SubResource("AtlasTexture_mw3si")
+
+[node name="LabelItem" type="Label" parent="BarraSuperior" unique_id=1310285003]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 1.0
+offset_right = 69.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0.54901963, 0.78431374, 1, 1)
+text = "ITEM"
+
+[node name="MarcoItem" type="Panel" parent="BarraSuperior" unique_id=2036476892]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 12.0
+offset_right = 66.0
+offset_bottom = 29.0
+mouse_filter = 2
+
+[node name="IconoHerramienta" type="TextureRect" parent="BarraSuperior/MarcoItem" unique_id=284262579]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 22.0
+offset_bottom = 17.0
+texture = ExtResource("3_lcd6g")
+stretch_mode = 3
+
+[node name="LabelPuntos" type="Label" parent="BarraSuperior" unique_id=1390439822]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 1.0
+offset_right = 116.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0.54901963, 0.78431374, 1, 1)
+text = "PUNTOS"
+
+[node name="Puntaje" type="Label" parent="BarraSuperior" unique_id=199196032]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 72.0
+offset_top = 12.0
+offset_right = 118.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 11
+theme_override_colors/font_color = Color(1, 0.8784314, 0.2509804, 1)
+text = "00000"
+
+[node name="NombreZona" type="Label" parent="BarraSuperior" unique_id=1826628766]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 120.0
+offset_top = 1.0
+offset_right = 254.0
+offset_bottom = 13.0
+theme_override_font_sizes/font_size = 7
+theme_override_colors/font_color = Color(0.49411765, 0.8784314, 0.5411765, 1)
+text = "ZONA 1/3 · BOSQUE SUCIO"
+
+[node name="Mision" type="Label" parent="BarraSuperior" unique_id=1689153883]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 120.0
+offset_top = 13.0
+offset_right = 254.0
+offset_bottom = 31.0
+text = "Clasifica la basura: 0/9"
+autowrap_mode = 2
+
+[node name="BarraCanecas" type="ColorRect" parent="." unique_id=803186806]
+unique_name_in_owner = true
+offset_top = 208.0
+offset_right = 256.0
+offset_bottom = 240.0
+theme = SubResource("Theme_m5de2")
+color = Color(0.0627451, 0.09411765, 0.1254902, 1)
+
+[node name="Caneca0" type="Control" parent="BarraCanecas" unique_id=519677302]
+anchors_preset = 0
+offset_right = 64.0
+offset_bottom = 32.0
+
+[node name="Seleccion" type="Panel" parent="BarraCanecas/Caneca0" unique_id=1778267976]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 63.0
+offset_bottom = 31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nwl5l")
+
+[node name="Icono" type="TextureRect" parent="BarraCanecas/Caneca0" unique_id=1620053843]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 24.0
+offset_bottom = 28.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_3bfcj")
+
+[node name="Nombre" type="Label" parent="BarraCanecas/Caneca0" unique_id=889219501]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 3.0
+offset_right = 63.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 7
+theme_override_colors/font_color = Color(0.49882352, 0.6541176, 0.9647059, 1)
+text = "1·Plástico"
+
+[node name="Contador" type="Label" parent="BarraCanecas/Caneca0" unique_id=843746308]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 15.0
+offset_right = 63.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 9
+text = "0/0"
+
+[node name="Caneca1" type="Control" parent="BarraCanecas" unique_id=660715333]
+anchors_preset = 0
+offset_left = 64.0
+offset_right = 128.0
+offset_bottom = 32.0
+
+[node name="Seleccion" type="Panel" parent="BarraCanecas/Caneca1" unique_id=580349623]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 63.0
+offset_bottom = 31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m5ue4")
+
+[node name="Icono" type="TextureRect" parent="BarraCanecas/Caneca1" unique_id=566276366]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 24.0
+offset_bottom = 28.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_px74g")
+
+[node name="Nombre" type="Label" parent="BarraCanecas/Caneca1" unique_id=702591893]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 3.0
+offset_right = 63.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 7
+theme_override_colors/font_color = Color(0.76235294, 0.76235294, 0.78588235, 1)
+text = "2·Papel"
+
+[node name="Contador" type="Label" parent="BarraCanecas/Caneca1" unique_id=364509652]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 15.0
+offset_right = 63.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 9
+text = "0/0"
+
+[node name="Caneca2" type="Control" parent="BarraCanecas" unique_id=583769857]
+anchors_preset = 0
+offset_left = 128.0
+offset_right = 192.0
+offset_bottom = 32.0
+
+[node name="Seleccion" type="Panel" parent="BarraCanecas/Caneca2" unique_id=1804139168]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 63.0
+offset_bottom = 31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_08xfc")
+
+[node name="Icono" type="TextureRect" parent="BarraCanecas/Caneca2" unique_id=322714806]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 24.0
+offset_bottom = 28.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_n4dia")
+
+[node name="Nombre" type="Label" parent="BarraCanecas/Caneca2" unique_id=212751081]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 3.0
+offset_right = 67.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 7
+theme_override_colors/font_color = Color(0.5082353, 0.8, 0.53647053, 1)
+text = "3·Orgánico"
+
+[node name="Contador" type="Label" parent="BarraCanecas/Caneca2" unique_id=420650716]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 15.0
+offset_right = 63.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 9
+text = "0/0"
+
+[node name="Caneca3" type="Control" parent="BarraCanecas" unique_id=1281999796]
+anchors_preset = 0
+offset_left = 192.0
+offset_right = 256.0
+offset_bottom = 32.0
+
+[node name="Seleccion" type="Panel" parent="BarraCanecas/Caneca3" unique_id=556876987]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 63.0
+offset_bottom = 31.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yh3kl")
+
+[node name="Icono" type="TextureRect" parent="BarraCanecas/Caneca3" unique_id=554050095]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 24.0
+offset_bottom = 28.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_l6ddh")
+
+[node name="Nombre" type="Label" parent="BarraCanecas/Caneca3" unique_id=1315175503]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 3.0
+offset_right = 63.0
+offset_bottom = 15.0
+theme_override_font_sizes/font_size = 7
+theme_override_colors/font_color = Color(0.9647059, 0.8517647, 0.4752941, 1)
+text = "4·Metal"
+
+[node name="Contador" type="Label" parent="BarraCanecas/Caneca3" unique_id=1604926063]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 15.0
+offset_right = 63.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 9
+text = "0/0"
+
+[node name="Aviso" type="PanelContainer" parent="." unique_id=1559511739]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 0)
+offset_left = 8.0
+offset_top = 150.0
+offset_right = 8.0
+offset_bottom = 150.0
+mouse_filter = 2
+theme = SubResource("Theme_m5de2")
+
+[node name="TextoAviso" type="Label" parent="Aviso" unique_id=775278029]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(230, 0)
+layout_mode = 2
+text = "Aviso"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Dialogo" type="PanelContainer" parent="." unique_id=1848267279]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(224, 0)
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 16.0
+offset_bottom = 64.0
+theme = SubResource("Theme_m5de2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Dialogo" unique_id=1356487924]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="TituloDialogo" type="Label" parent="Dialogo/VBoxContainer" unique_id=420723559]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+theme_override_colors/font_color = Color(1, 0.8784314, 0.2509804, 1)
+text = "TÍTULO"
+horizontal_alignment = 1
+
+[node name="TextoDialogo" type="Label" parent="Dialogo/VBoxContainer" unique_id=1551964657]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(214, 0)
+layout_mode = 2
+text = "Texto del diálogo"
+autowrap_mode = 2
+
+[node name="Continuar" type="Label" parent="Dialogo/VBoxContainer" unique_id=1599932290]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 7
+theme_override_colors/font_color = Color(0.54901963, 0.78431374, 1, 1)
+text = "ENTER ▶"
+horizontal_alignment = 2

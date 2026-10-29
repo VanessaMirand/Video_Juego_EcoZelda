@@ -1,0 +1,119 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/EcoZelda/Enemies/octorok_plastico.gd" id="1_remw1"]
+[ext_resource type="Texture2D" path="res://Assets/02_Overworld_Enemies/Octorok_Red_Down.png" id="2_2og8r"]
+[ext_resource type="Texture2D" path="res://Assets/02_Overworld_Enemies/Octorok_Red_Left.png" id="3_40563"]
+[ext_resource type="Texture2D" path="res://Assets/02_Overworld_Enemies/Octorok_Red_Right.png" id="4_w750n"]
+[ext_resource type="Texture2D" path="res://Assets/02_Overworld_Enemies/Octorok_Red_Up.png" id="5_6ssby"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a0e6i"]
+radius = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_menh7"]
+atlas = ExtResource("2_2og8r")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxk1x"]
+atlas = ExtResource("2_2og8r")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0gny"]
+atlas = ExtResource("3_40563")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_324td"]
+atlas = ExtResource("3_40563")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqu3j"]
+atlas = ExtResource("4_w750n")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkbn1"]
+atlas = ExtResource("4_w750n")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fx7tj"]
+atlas = ExtResource("5_6ssby")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fki4a"]
+atlas = ExtResource("5_6ssby")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ylunw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_menh7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxk1x")
+}],
+"loop": 1,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0gny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_324td")
+}],
+"loop": 1,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqu3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkbn1")
+}],
+"loop": 1,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fx7tj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fki4a")
+}],
+"loop": 1,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[node name="OctorokPlastico" type="CharacterBody2D" unique_id=864104526]
+collision_layer = 4
+collision_mask = 33
+motion_mode = 1
+script = ExtResource("1_remw1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1585239299]
+shape = SubResource("CircleShape2D_a0e6i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=962181119]
+self_modulate = Color(1, 0.92, 0.8, 1)
+sprite_frames = SubResource("SpriteFrames_ylunw")
+animation = &"walk_down"
+
+[node name="RayCast2D_UP" type="RayCast2D" parent="." unique_id=1404589744]
+target_position = Vector2(0, -12)
+collision_mask = 33
+
+[node name="RayCast2D2_DOWN" type="RayCast2D" parent="." unique_id=264902297]
+target_position = Vector2(0, 12)
+collision_mask = 33
+
+[node name="RayCast2D3_LEFT" type="RayCast2D" parent="." unique_id=364736110]
+target_position = Vector2(-12, 0)
+collision_mask = 33
+
+[node name="RayCast2D4_RIGHT" type="RayCast2D" parent="." unique_id=1068202169]
+target_position = Vector2(12, 0)
+collision_mask = 33

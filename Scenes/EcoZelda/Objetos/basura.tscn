@@ -1,0 +1,20 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/EcoZelda/Objetos/basura.gd" id="1_sncfm"]
+[ext_resource type="Texture2D" path="res://Assets/EcoZelda/basura.png" id="2_7qxys"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sy61e"]
+radius = 6.0
+
+[node name="Basura" type="Area2D" unique_id=2063224646]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_sncfm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=909429887]
+texture = ExtResource("2_7qxys")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=646361984]
+shape = SubResource("CircleShape2D_sy61e")

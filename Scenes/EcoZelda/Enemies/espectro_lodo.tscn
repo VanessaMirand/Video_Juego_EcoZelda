@@ -1,0 +1,42 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/EcoZelda/Enemies/espectro_lodo.gd" id="1_qr6ig"]
+[ext_resource type="Texture2D" path="res://Assets/EcoZelda/espectro_lodo.png" id="2_mjteb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rhrja"]
+radius = 9.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xg38s"]
+atlas = ExtResource("2_mjteb")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1q23p"]
+atlas = ExtResource("2_mjteb")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j254b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xg38s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1q23p")
+}],
+"loop": 1,
+"name": &"flotar",
+"speed": 3.0
+}]
+
+[node name="EspectroLodo" type="CharacterBody2D" unique_id=1501602253]
+collision_layer = 4
+collision_mask = 33
+motion_mode = 1
+script = ExtResource("1_qr6ig")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1516407095]
+shape = SubResource("CircleShape2D_rhrja")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1592482927]
+sprite_frames = SubResource("SpriteFrames_j254b")
+animation = &"flotar"

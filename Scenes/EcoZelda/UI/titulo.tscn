@@ -1,0 +1,244 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://Scripts/EcoZelda/UI/titulo.gd" id="1_vj01h"]
+[ext_resource type="Texture2D" path="res://Assets/EcoZelda/arbol_sagrado.png" id="2_pkh40"]
+[ext_resource type="Texture2D" path="res://Assets/EcoZelda/canecas.png" id="3_m8uhq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aalbi"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.07058824, 0.19607843, 0.2901961, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.22745098, 0.41568628, 0.5411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2d7eb"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6vbya"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.11764706, 0.2901961, 0.41568628, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7t800"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.07058824, 0.19607843, 0.2901961, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.22745098, 0.41568628, 0.5411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1om5w"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.16470589, 0.3529412, 0.47843137, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.8784314, 0.2509804, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tvier"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_md4fj"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_m5de2"]
+default_font_size = 8
+Button/colors/font_disabled_color = Color(0.9, 0.9, 0.9, 1)
+Button/styles/disabled = SubResource("StyleBoxFlat_aalbi")
+Button/styles/focus = SubResource("StyleBoxFlat_2d7eb")
+Button/styles/hover = SubResource("StyleBoxFlat_6vbya")
+Button/styles/normal = SubResource("StyleBoxFlat_7t800")
+Button/styles/pressed = SubResource("StyleBoxFlat_1om5w")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Panel/styles/panel = SubResource("StyleBoxFlat_tvier")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_md4fj")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7xii"]
+atlas = ExtResource("2_pkh40")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5m31"]
+atlas = ExtResource("3_m8uhq")
+region = Rect2(0, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_701e8"]
+atlas = ExtResource("3_m8uhq")
+region = Rect2(20, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awxbv"]
+atlas = ExtResource("3_m8uhq")
+region = Rect2(40, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlvlt"]
+atlas = ExtResource("3_m8uhq")
+region = Rect2(60, 0, 20, 24)
+
+[node name="Titulo" type="Control" unique_id=2021181273]
+layout_mode = 3
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 256.0
+offset_bottom = 240.0
+theme = SubResource("Theme_m5de2")
+script = ExtResource("1_vj01h")
+
+[node name="Fondo" type="ColorRect" parent="." unique_id=1321191448]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 256.0
+offset_bottom = 240.0
+mouse_filter = 2
+color = Color(0.043137256, 0.12156863, 0.07058824, 1)
+
+[node name="Nombre" type="Label" parent="." unique_id=908368328]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 256.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 26
+theme_override_colors/font_color = Color(0.49411765, 0.8784314, 0.5411765, 1)
+theme_override_constants/outline_size = 4
+text = "EcoZelda"
+horizontal_alignment = 1
+
+[node name="Subtitulo" type="Label" parent="." unique_id=218253195]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 256.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(1, 0.8784314, 0.2509804, 1)
+text = "El Despertar del Ecosistema"
+horizontal_alignment = 1
+
+[node name="Historia" type="Label" parent="." unique_id=1880555983]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 55.0
+offset_right = 246.0
+offset_bottom = 89.0
+theme_override_font_sizes/font_size = 7
+text = "La basura y el lodo enferman el bosque. Clasifica cada residuo en su caneca y despierta al Árbol Sagrado."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Arbol" type="TextureRect" parent="." unique_id=722454582]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 96.0
+offset_right = 152.0
+offset_bottom = 144.0
+texture = SubResource("AtlasTexture_x7xii")
+
+[node name="Caneca0" type="TextureRect" parent="." unique_id=1122846261]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 120.0
+offset_right = 60.0
+offset_bottom = 144.0
+texture = SubResource("AtlasTexture_t5m31")
+
+[node name="Caneca1" type="TextureRect" parent="." unique_id=92067258]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 120.0
+offset_right = 84.0
+offset_bottom = 144.0
+texture = SubResource("AtlasTexture_701e8")
+
+[node name="Caneca2" type="TextureRect" parent="." unique_id=330646687]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 120.0
+offset_right = 192.0
+offset_bottom = 144.0
+texture = SubResource("AtlasTexture_awxbv")
+
+[node name="Caneca3" type="TextureRect" parent="." unique_id=1372646449]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 120.0
+offset_right = 216.0
+offset_bottom = 144.0
+texture = SubResource("AtlasTexture_mlvlt")
+
+[node name="Controles" type="Label" parent="." unique_id=387622549]
+layout_mode = 0
+offset_top = 148.0
+offset_right = 256.0
+offset_bottom = 175.0
+theme_override_font_sizes/font_size = 7
+theme_override_colors/font_color = Color(0.54901963, 0.78431374, 1, 1)
+text = "WASD / Flechas: moverse    ESPACIO: pinza / espada
+1-4 o Q/E: elegir caneca    ENTER: hablar / continuar"
+horizontal_alignment = 1
+
+[node name="Presiona" type="Label" parent="." unique_id=1960802988]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = 190.0
+offset_right = 256.0
+offset_bottom = 204.0
+theme_override_font_sizes/font_size = 10
+text = "Presiona ENTER para comenzar"
+horizontal_alignment = 1
+
+[node name="Credito" type="Label" parent="." unique_id=327625587]
+layout_mode = 0
+offset_top = 224.0
+offset_right = 256.0
+offset_bottom = 236.0
+theme_override_font_sizes/font_size = 6
+theme_override_colors/font_color = Color(0.6, 0.7, 0.6, 1)
+text = "Serious Game · Gestión ambiental y reciclaje · Godot 4"
+horizontal_alignment = 1
