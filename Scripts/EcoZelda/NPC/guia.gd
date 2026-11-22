@@ -21,7 +21,7 @@ func _ready() -> void:
 func _on_zona_hablar_body_entered(body: Node2D) -> void:
 	if body is EcoPlayer:
 		jugador_cerca = true
-		aviso.visible = true
+		aviso.visible = not hablando
 
 
 func _on_zona_hablar_body_exited(body: Node2D) -> void:
@@ -31,16 +31,32 @@ func _on_zona_hablar_body_exited(body: Node2D) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if jugador_cerca and not hablando and event.is_action_pressed("ACEPTAR"):
+	if not jugador_cerca or hablando:
+		return
+	var hud := get_tree().get_first_node_in_group("hud")
+	if hud != null and hud.dialogo_abierto:
+		return
+	if event.is_action_pressed("ACEPTAR"):
 		get_viewport().set_input_as_handled()
 		hablar()
 
 
 func hablar() -> void:
-	var hud = get_tree().get_first_node_in_group("hud")
+	var hud := get_tree().get_first_node_in_group("hud")
 	if hud == null or hablando:
 		return
 	hablando = true
-	for texto in dialogos:
+	aviso.visible = false
+
+	var lineas := dialogos
+	if lineas.is_empty():
+		lineas = PackedStringArray([
+			"¡Bienvenido al bosque! Usa WASD o flechas para moverte y elige la caneca correcta (1-4, Q/E o clic).",
+			"Clasifica todos los residuos de la zona para despertar el ecosistema."
+		])
+
+	for texto in lineas:
 		await hud.mostrar_dialogo(texto, "ANCIANO")
+
 	hablando = false
+	aviso.visible = jugador_cerca
