@@ -11,7 +11,9 @@ var can_move: bool = true
 
 func _process(delta: float) -> void:
 	if  Input.is_action_just_pressed("ATAQUE"):
+		SoundManager.play_sfx("pinza_action")
 		attack()
+		
 	
 	if is_attaking == true:
 		return
