@@ -52,6 +52,7 @@ func _physics_process(delta: float) -> void:
 
 
 func recibir_danio(origen: Vector2) -> void:
+	SoundManager.play_sfx("enemy_hit")
 	vida -= 1
 	empuje = (global_position - origen).normalized() * 160
 	var tween = create_tween()

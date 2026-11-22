@@ -57,6 +57,7 @@ func intentar_recoger(caneca: int) -> void:
 	var hud = get_tree().get_first_node_in_group("hud")
 	if caneca == tipo:
 		ya_recogida = true
+		SoundManager.play_sfx("recycle_success")
 		GameManager.registrar_acierto(tipo)
 		if hud:
 			hud.mostrar_aviso("¡Bien! %s → caneca %s" % [nombre(), GameManager.COLORES_CANECA[tipo]], GameManager.COLORES_UI[tipo])

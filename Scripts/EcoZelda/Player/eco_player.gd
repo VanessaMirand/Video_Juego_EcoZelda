@@ -89,6 +89,7 @@ func play_direccion(prefijo: String) -> void:
 # ---------------- PINZA RECOLECTORA ----------------
 func usar_pinza() -> void:
 	is_attaking = true
+	SoundManager.play_sfx("pinza_action")
 	play_direccion("walk")
 	animated_sprite_2d.pause()
 	animated_sprite_2d.frame = 0

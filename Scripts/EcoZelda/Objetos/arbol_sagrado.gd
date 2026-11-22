@@ -7,6 +7,9 @@ extends StaticBody2D
 
 
 func restaurar() -> void:
+	SoundManager.play_sfx("zone_purified")
+	SoundManager.play_music("clean_forest")
+	
 	var mundo = get_tree().get_first_node_in_group("mundo")
 	var tween = create_tween()
 	tween.tween_property(sprite_2d, "modulate", Color(3, 3, 3), 0.4)

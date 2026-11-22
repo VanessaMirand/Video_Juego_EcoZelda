@@ -22,6 +22,7 @@ const DESTELLO = preload("res://Scenes/EcoZelda/Objetos/destello.tscn")
 
 func _ready() -> void:
 	add_to_group("mundo")
+	SoundManager.play_music("dirty_forest")
 	player.sin_vida.connect(_on_player_sin_vida)
 	for zona in zonas.get_children():
 		zona.restaurada.connect(_on_zona_restaurada)

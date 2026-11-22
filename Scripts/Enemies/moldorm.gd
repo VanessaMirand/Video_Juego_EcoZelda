@@ -85,7 +85,9 @@ func _on_random_direction_timer_timeout() -> void:
 	timer.wait_time = randf_range(1.0, 5.0)
 	
 # ---------------- SISTEMA DE DAMAGE SECUENCIAL -------
-func take_damage():
+func take_damage(_amount: int = 1) -> void:
+	SoundManager.play_sfx("enemy_hit")
+	
 	if active_segments.size() > 0:
 		# Eliminar el último segmento del array
 		var last_segment = active_segments.pop_back()
